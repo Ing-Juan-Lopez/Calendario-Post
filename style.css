@@ -531,12 +531,18 @@ h1 {
         min-height: 0;
         max-height: none;
     }
-    .day {
-        aspect-ratio: 1;
-    }
     .sidebar {
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
+    }
+    .sidebar-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: none;
+    }
+    .sidebar-person {
+        width: 200px;
     }
 }
 
@@ -586,31 +592,398 @@ h1 {
     }
 }
 
-@media (max-width: 1100px) {
-    .sidebar-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-height: none;
-    }
-    .sidebar-person {
-        width: 200px;
-    }
+/* ============================================
+   MOBILE SIDEBAR TOGGLE BUTTON & OVERLAY
+   ============================================ */
+
+/* Floating toggle button — hidden on desktop */
+.mobile-sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 90;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
-@media (max-width: 600px) {
+
+.mobile-sidebar-toggle:hover {
+    transform: scale(1.05);
+}
+
+.mobile-sidebar-toggle:active {
+    transform: scale(0.95);
+}
+
+.mobile-sidebar-toggle .material-icons {
+    font-size: 28px;
+}
+
+/* Overlay behind the mobile sidebar panel */
+.mobile-sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 95;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-sidebar-overlay.active {
+    opacity: 1;
+}
+
+/* The sliding panel that contains the sidebar content */
+.mobile-sidebar-panel {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 75vh;
+    background: rgba(15, 23, 42, 0.97);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    border-radius: 24px 24px 0 0;
+    z-index: 96;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow-y: auto;
+    padding: 20px 20px 30px;
+    overscroll-behavior: contain;
+}
+
+.mobile-sidebar-panel.active {
+    transform: translateY(0);
+}
+
+/* Drag handle at the top of the panel */
+.panel-handle {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: 0 auto 16px;
+}
+
+/* Section titles inside the panel */
+.panel-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 16px 0 12px;
+}
+
+.panel-section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Person items inside the panel */
+.panel-people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.panel-person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+}
+
+.panel-person-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    flex-shrink: 0;
+}
+
+.panel-person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.panel-person-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ============================================
+   MOBILE BREAKPOINT (≤ 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    /* --- Hide desktop sidebars, show toggle --- */
+    .sidebar {
+        display: none !important;
+    }
+
+    .mobile-sidebar-toggle {
+        display: flex;
+    }
+
+    .mobile-sidebar-overlay,
+    .mobile-sidebar-panel {
+        display: block;
+    }
+
+    /* --- Layout --- */
+    .layout-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        gap: 0;
+    }
+
     .app-container {
-        padding: 15px;
+        padding: 16px;
+        border-radius: 18px;
+        max-width: 100%;
     }
-    
+
+    /* --- Title --- */
+    .main-title {
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+    }
+
+    /* --- Header (month navigation) --- */
+    header {
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .icon-button .material-icons {
+        font-size: 22px;
+    }
+
+    /* --- Calendar Grid --- */
+    .weekdays {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+
+    .days {
+        gap: 4px;
+    }
+
     .day {
-        padding: 5px;
+        padding: 4px;
+        border-radius: 8px;
+        min-height: 44px;
     }
-    
+
     .day-number {
+        font-size: 0.9rem;
+    }
+
+    .indicators-container {
+        gap: 2px;
+    }
+
+    .indicator {
+        font-size: 0.55rem;
+        padding: 2px 1px;
+        border-radius: 3px;
+        line-height: 1.2;
+    }
+
+    /* --- Intro Screen --- */
+    .intro-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .intro-list-container {
+        gap: 14px;
+        max-width: 100%;
+    }
+
+    .intro-person {
+        width: calc(33.33% - 10px);
+        min-width: 90px;
+    }
+
+    .intro-person .photo-container {
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .intro-name {
+        font-size: 0.85rem;
+    }
+
+    /* --- Modals --- */
+    .glass-effect {
+        padding: 20px 16px;
+        border-radius: 18px;
+        max-width: 100%;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .birthday-person-block {
+        min-width: 150px;
+    }
+
+    .birthday-name {
+        font-size: 1.3rem;
+    }
+
+    .birthday-text {
         font-size: 1rem;
     }
-    
+
+    .photo-container {
+        max-width: 200px;
+    }
+
+    #birthday-list-container {
+        gap: 20px;
+    }
+
+    .close-modal {
+        top: 12px;
+        right: 12px;
+    }
+
+    .attendee-avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pre-modal-card {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .pre-modal-card h3 {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   SMALL PHONES (≤ 400px)
+   ============================================ */
+@media (max-width: 400px) {
+    body {
+        padding: 6px;
+    }
+
+    .app-container {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .main-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .icon-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .days {
+        gap: 3px;
+    }
+
+    .day {
+        padding: 3px;
+        min-height: 38px;
+        border-radius: 6px;
+    }
+
+    .day-number {
+        font-size: 0.8rem;
+    }
+
     .indicator {
-        font-size: 0.6rem;
-        padding: 2px;
+        font-size: 0.5rem;
+        padding: 1px;
+    }
+
+    .intro-person {
+        width: calc(33.33% - 8px);
+        min-width: 80px;
+    }
+
+    .intro-name {
+        font-size: 0.75rem;
+    }
+
+    .intro-title {
+        font-size: 1.5rem;
+    }
+
+    .birthday-name {
+        font-size: 1.1rem;
+    }
+
+    .photo-container {
+        max-width: 160px;
+    }
+
+    .glass-effect {
+        padding: 16px 12px;
+    }
+
+    .mobile-sidebar-toggle {
+        width: 48px;
+        height: 48px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .mobile-sidebar-toggle .material-icons {
+        font-size: 24px;
     }
 }

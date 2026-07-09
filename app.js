@@ -329,6 +329,9 @@ function runIntroAnimation() {
     if (sidebarCoordis) sidebarCoordis.innerHTML = coordis.map(generateSidebarPersonHTML).join('');
     if (sidebarChicos) sidebarChicos.innerHTML = chicos.map(generateSidebarPersonHTML).join('');
 
+    // Populate mobile panel
+    populateMobilePanel(chicos, coordis);
+
     const introScreen = document.getElementById('intro-screen');
     const introStep = document.getElementById('intro-step');
     const mainApp = document.getElementById('main-app');
@@ -345,6 +348,80 @@ function runIntroAnimation() {
         }, 1000); // Matches the 1s CSS transition
 
     }, 4500); // Intro duration
+}
+
+// ---- Mobile Sidebar Panel ----
+function populateMobilePanel(chicos, coordis) {
+    const panelContent = document.getElementById('mobilePanelContent');
+    if (!panelContent) return;
+
+    let html = '';
+
+    // Chicos section
+    html += '<div class="panel-section-title">Chicos del Post</div>';
+    html += '<div class="panel-people-grid">';
+    chicos.forEach(person => {
+        const firstName = person.name.split(' ')[0];
+        const photoUrl = `photos/${person.photo}`;
+        html += `
+            <div class="panel-person" data-name="${person.name}">
+                <div class="panel-person-photo">
+                    <img src="${photoUrl}" alt="${firstName}">
+                </div>
+                <div class="panel-person-name">${firstName}</div>
+            </div>
+        `;
+    });
+    html += '</div>';
+
+    // Coordis section
+    html += '<div class="panel-section-title">Coordis</div>';
+    html += '<div class="panel-people-grid">';
+    coordis.forEach(person => {
+        const firstName = person.name.split(' ')[0];
+        const photoUrl = `photos/${person.photo}`;
+        html += `
+            <div class="panel-person" data-name="${person.name}">
+                <div class="panel-person-photo">
+                    <img src="${photoUrl}" alt="${firstName}">
+                </div>
+                <div class="panel-person-name">${firstName}</div>
+            </div>
+        `;
+    });
+    html += '</div>';
+
+    panelContent.innerHTML = html;
+}
+
+// Mobile panel toggle
+const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+const mobileSidebarPanel = document.getElementById('mobileSidebarPanel');
+
+function openMobilePanel() {
+    if (mobileSidebarOverlay) mobileSidebarOverlay.classList.add('active');
+    if (mobileSidebarPanel) mobileSidebarPanel.classList.add('active');
+}
+
+function closeMobilePanel() {
+    if (mobileSidebarOverlay) mobileSidebarOverlay.classList.remove('active');
+    if (mobileSidebarPanel) mobileSidebarPanel.classList.remove('active');
+}
+
+if (mobileSidebarToggle) {
+    mobileSidebarToggle.addEventListener('click', () => {
+        const isOpen = mobileSidebarPanel && mobileSidebarPanel.classList.contains('active');
+        if (isOpen) {
+            closeMobilePanel();
+        } else {
+            openMobilePanel();
+        }
+    });
+}
+
+if (mobileSidebarOverlay) {
+    mobileSidebarOverlay.addEventListener('click', closeMobilePanel);
 }
 
 // Initialize

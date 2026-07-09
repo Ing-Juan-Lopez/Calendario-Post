@@ -5,39 +5,14 @@ const birthdaysData = [
     "photo": "LauraCamilaMoralesGonzalez.jpeg"
   },
   {
-    "name": "Laura Sofia Urrea Garzon",
-    "birthday": "29/09/2008",
-    "photo": "LauraSofiaUrreaGarzon.jpeg"
-  },
-  {
-    "name": "Angel Ricardo Niño Quevedo",
-    "birthday": "28/04/2007",
-    "photo": "AngelRicardoNiñoQuevedo.jpeg"
-  },
-  {
-    "name": "Nícol Yuliana Saza Ortiz",
-    "birthday": "28/04/2006",
-    "photo": "NícolYulianaSazaOrtiz.jpeg"
-  },
-  {
-    "name": "Sara Sofía Jiménez Rodríguez",
-    "birthday": "26/01/2009",
-    "photo": "SaraSofiaJimenezRodriguez.jpeg"
-  },
-  {
     "name": "Diego Alexander Hernández Acosta",
     "birthday": "17/01/2004",
     "photo": "DiegoAlexanderHernandezAcosta.jpeg"
   },
   {
-    "name": "María Claudia Herrera Cruz",
-    "birthday": "30/01/2004",
-    "photo": "MaríaClaudiaHerreraCruz.jpeg"
-  },
-  {
-    "name": "Gabriela Montero Cárdenas",
-    "birthday": "07/11/2008",
-    "photo": "GabrielaMonteroCardenas.jpeg"
+    "name": "Laura Sofia Urrea Garzon",
+    "birthday": "29/09/2008",
+    "photo": "LauraSofiaUrreaGarzon.jpeg"
   },
   {
     "name": "Juan Felipe Moreno Perdomo",
@@ -45,9 +20,39 @@ const birthdaysData = [
     "photo": "JuanFelipeMorenoPerdomo.jpeg"
   },
   {
+    "name": "Nícol Yuliana Saza Ortiz",
+    "birthday": "28/04/2006",
+    "photo": "NícolYulianaSazaOrtiz.jpeg"
+  },
+  {
+    "name": "Miguel Ángel Alberto Chitiva Triana",
+    "birthday": "23/06/2007",
+    "photo": "MiguelAngelAlbertoChitivaTriana"
+  },
+  {
+    "name": "Sara Sofía Jiménez Rodríguez",
+    "birthday": "26/01/2009",
+    "photo": "SaraSofiaJimenezRodriguez.jpeg"
+  },
+  {
     "name": "Santiago Guio Lozano",
     "birthday": "03/02/2011",
     "photo": "SantiagoGuioLozano.jpeg"
+  },
+  {
+    "name": "María Claudia Herrera Cruz",
+    "birthday": "30/01/2004",
+    "photo": "MaríaClaudiaHerreraCruz.jpeg"
+  },
+  {
+    "name": "Angel Ricardo Niño Quevedo",
+    "birthday": "28/04/2007",
+    "photo": "AngelRicardoNiñoQuevedo.jpeg"
+  },
+  {
+    "name": "Gabriela Montero Cárdenas",
+    "birthday": "07/11/2008",
+    "photo": "GabrielaMonteroCardenas.jpeg"
   },
   {
     "name": "Paula Milena Melo Infante",

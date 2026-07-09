@@ -28,7 +28,8 @@ const eventsData = [
       "Paula Milena Melo Infante",
       "Juan Pablo López Cuéllar",
       "Harrison Hernández Peña",
-      "Juan Felipe Moreno Perdomo"
+      "Juan Felipe Moreno Perdomo",
+      "Diego Alexander Hernández Acosta"
     ]
   },
   {

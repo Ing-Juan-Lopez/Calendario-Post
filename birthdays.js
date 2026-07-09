@@ -26,7 +26,7 @@ const birthdaysData = [
   },
   {
     "name": "Diego Alexander Hernández Acosta",
-    "birthday": "17/03/2004",
+    "birthday": "17/01/2004",
     "photo": "DiegoAlexanderHernandezAcosta.jpeg"
   },
   {

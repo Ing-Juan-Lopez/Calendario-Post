@@ -1,0 +1,52 @@
+const eventTypes = {
+  "reunion": {
+    "emoji": "👥",
+    "color": "#3b82f6" // Azul
+  },
+  "taller": {
+    "emoji": "📝",
+    "color": "#10b981" // Verde
+  },
+  "fiesta": {
+    "emoji": "🎉",
+    "color": "#f59e0b" // Naranja
+  },
+  "default": {
+    "emoji": "📅",
+    "color": "#8b5cf6" // Morado
+  }
+};
+
+const eventsData = [
+  {
+    "title": "Reunión de Post",
+    "date": "12/07/2026",
+    "type": "reunion",
+    "location": "Parroquia Nuestra Señora del Pilar",
+    "time": "8:00 AM",
+    "attendees": [
+      "Paula Milena Melo Infante",
+      "Juan Pablo López Cuéllar"
+    ]
+  },
+  /*{
+      "title": "Prueba",
+      "date": "12/07/2026",
+      "type": "taller",
+      "location": "Parroquia Nuestra Señora del Pilar",
+      "time": "8:00 AM",
+      "attendees": [
+        "Angel Ricardo Niño Quevedo",
+        "Juan Pablo López Cuéllar",
+        "Sara Sofía Jiménez Rodríguez"
+      ]
+    },
+  {
+    "title": "Reunión de Post",
+    "date": "15/07/2026",
+    "type": "reunion",
+    "location": "Parroquia Nuestra Señora del Pilar",
+    "time": "8:00 AM",
+    "attendees": "all"
+  }*/
+];

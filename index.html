@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Post Encuentro 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Pantalla de Introducción -->
+    <div id="intro-screen" class="active">
+        <div id="intro-step" class="intro-step active">
+            <h2 class="intro-title">Chicos del Post</h2>
+            <div id="chicos-list-intro" class="intro-list-container">
+                <!-- Chicos inyectados aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal (oculto inicialmente) -->
+    <div id="main-app" class="hidden-app">
+        <div class="layout-wrapper">
+            <!-- Sidebar Chicos -->
+            <aside class="sidebar left-sidebar">
+                <h3 class="sidebar-title">Chicos del Post</h3>
+                <div id="sidebar-chicos" class="sidebar-list"></div>
+            </aside>
+            
+            <div class="app-container">
+        <h2 class="main-title">Calendario Post Encuentro 2026 ☸️</h2>
+        <header>
+            <button id="prev-month" class="icon-button"><span class="material-icons">chevron_left</span></button>
+            <h1 id="month-year">Cargando...</h1>
+            <button id="next-month" class="icon-button"><span class="material-icons">chevron_right</span></button>
+        </header>
+
+        <div class="calendar">
+            <div class="weekdays">
+                <div>Dom</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mié</div>
+                <div>Jue</div>
+                <div>Vie</div>
+                <div>Sáb</div>
+            </div>
+            <div class="days" id="calendar-days">
+                <!-- Los días se inyectarán aquí vía JS -->
+            </div>
+        </div>
+            </div>
+            
+            <!-- Sidebar Coordis -->
+            <aside class="sidebar right-sidebar">
+                <h3 class="sidebar-title">Coordis</h3>
+                <div id="sidebar-coordis" class="sidebar-list"></div>
+            </aside>
+        </div>
+
+    <!-- Pre-modal para selección de eventos del día -->
+    <div id="pre-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <button class="close-modal"><span class="material-icons">close</span></button>
+            <h2 class="sidebar-title" style="margin-bottom: 20px;">Eventos del Día</h2>
+            <div id="pre-modal-list" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Opciones de eventos/cumpleaños se inyectarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Eventos Principal -->
+    <!-- Modal para Cumpleaños -->
+    <div id="birthday-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <button class="close-modal"><span class="material-icons">close</span></button>
+            <div id="birthday-list-container">
+                <!-- Información del evento se inyectará aquí -->
+            </div>
+            <div id="event-attendees-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; min-height: 80px;">
+                <!-- Asistentes reales se inyectarán aquí -->
+            </div>
+        </div>
+    </div>
+
+
+
+    </div> <!-- End main-app -->
+    <script src="events.js"></script>
+    <script src="birthdays.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

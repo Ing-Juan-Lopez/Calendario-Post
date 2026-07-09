@@ -1,6 +1,6 @@
 const birthdaysData = [
   {
-    "name": "Laura Camila Morales Gonzalez",
+    "name": "Laura Camila Morales González",
     "birthday": "11/08/2006",
     "photo": "LauraCamilaMoralesGonzalez.jpeg"
   },

@@ -27,7 +27,8 @@ const eventsData = [
     "attendees": [
       "Paula Milena Melo Infante",
       "Juan Pablo López Cuéllar",
-      "Harrison Hernández Peña"
+      "Harrison Hernández Peña",
+      "Juan Felipe Moreno Perdomo"
     ]
   },
   {

@@ -27,7 +27,7 @@ const birthdaysData = [
   {
     "name": "Miguel Ángel Alberto Chitiva Triana",
     "birthday": "23/06/2007",
-    "photo": "MiguelAngelAlbertoChitivaTriana"
+    "photo": "MiguelAngelAlbertoChitivaTriana.jpeg"
   },
   {
     "name": "Sara Sofía Jiménez Rodríguez",
@@ -53,6 +53,11 @@ const birthdaysData = [
     "name": "Gabriela Montero Cárdenas",
     "birthday": "07/11/2008",
     "photo": "GabrielaMonteroCardenas.jpeg"
+  },
+  {
+    "name": "Harrison Hernández Peña",
+    "birthday": "26/09/2005",
+    "photo": "HarrisonHernandezPeña.jpeg"
   },
   {
     "name": "Paula Milena Melo Infante",

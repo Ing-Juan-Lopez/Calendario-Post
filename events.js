@@ -26,7 +26,20 @@ const eventsData = [
     "time": "8:00 AM",
     "attendees": [
       "Paula Milena Melo Infante",
-      "Juan Pablo López Cuéllar"
+      "Juan Pablo López Cuéllar",
+      "Harrison Hernández Peña"
+    ]
+  },
+  {
+    "title": "Reunión de Post",
+    "date": "19/07/2026",
+    "type": "reunion",
+    "location": "Parroquia Nuestra Señora del Pilar",
+    "time": "8:00 AM",
+    "attendees": [
+      "Paula Milena Melo Infante",
+      "Juan Pablo López Cuéllar",
+      "Laura Camila Morales González"
     ]
   },
   /*{

@@ -29,7 +29,8 @@ const eventsData = [
       "Juan Pablo López Cuéllar",
       "Harrison Hernández Peña",
       "Juan Felipe Moreno Perdomo",
-      "Diego Alexander Hernández Acosta"
+      "Diego Alexander Hernández Acosta",
+      "Maria Claudia Herrera Cruz"
     ]
   },
   {

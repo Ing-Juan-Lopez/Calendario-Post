@@ -30,7 +30,7 @@ const eventsData = [
       "Harrison Hernández Peña",
       "Juan Felipe Moreno Perdomo",
       "Diego Alexander Hernández Acosta",
-      "Maria Claudia Herrera Cruz"
+      "María Claudia Herrera Cruz"
     ]
   },
   {

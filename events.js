@@ -65,4 +65,15 @@ const eventsData = [
     "time": "8:00 AM",
     "attendees": "all"
   }*/
+  {
+    "title": "Reunión de Post",
+    "date": "9/08/2026",
+    "type": "reunion",
+    "location": "Parroquia Nuestra Señora del Pilar",
+    "time": "8:00 AM",
+    "attendees": [
+      "Paula Milena Melo Infante",
+      "Juan Pablo López Cuéllar",
+    ]
+  }
 ];

@@ -74,6 +74,9 @@ const eventsData = [
     "attendees": [
       "Paula Milena Melo Infante",
       "Juan Pablo López Cuéllar",
+      "Laura Camila Morales González",
+      "Santiago Vega Cortés",
+      "Miguel Ángel Alberto Chitiva Triana"
     ]
   }
 ];

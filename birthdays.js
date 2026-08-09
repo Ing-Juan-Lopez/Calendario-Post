@@ -60,6 +60,11 @@ const birthdaysData = [
     "photo": "HarrisonHernandezPeña.jpeg"
   },
   {
+    "name": "Santiago Vega Cortés",
+    "birthday": "12/03/2001",
+    "photo": "SantiagoVegaCortes.jpeg"
+  },
+  {
     "name": "Paula Milena Melo Infante",
     "birthday": "28/10/2004",
     "photo": "PaulaMilenaMeloInfante.jpeg",

@@ -61,7 +61,7 @@ const birthdaysData = [
   },
   {
     "name": "Santiago Vega Cortés",
-    "birthday": "12/03/2001",
+    "birthday": "12/03/2003",
     "photo": "SantiagoVegaCortes.jpeg"
   },
   {

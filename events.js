@@ -80,5 +80,16 @@ const eventsData = [
       "Nícol Yuliana Saza Ortiz",
       "María Claudia Herrera Cruz"
     ]
+  },
+  {
+    "title": "Reunión de Post",
+    "date": "16/08/2026",
+    "type": "reunion",
+    "location": "Parroquia Nuestra Señora del Pilar",
+    "time": "8:00 AM",
+    "attendees": [
+      "Paula Milena Melo Infante",
+      "Juan Pablo López Cuéllar",
+    ]
   }
 ];

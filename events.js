@@ -91,7 +91,8 @@ const eventsData = [
       "Paula Milena Melo Infante",
       "Juan Pablo López Cuéllar",
       "María Claudia Herrera Cruz",
-      "Miguel Ángel Alberto Chitiva Triana"
+      "Miguel Ángel Alberto Chitiva Triana",
+      "Nícol Yuliana Saza Ortiz"
     ]
   }
 ];

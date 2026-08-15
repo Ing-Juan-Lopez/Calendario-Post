@@ -90,7 +90,8 @@ const eventsData = [
     "attendees": [
       "Paula Milena Melo Infante",
       "Juan Pablo López Cuéllar",
-      "María Claudia Herrera Cruz"
+      "María Claudia Herrera Cruz",
+      "Miguel Ángel Alberto Chitiva Triana"
     ]
   }
 ];
